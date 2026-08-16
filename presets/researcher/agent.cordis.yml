@@ -1,0 +1,41 @@
+# 原创预设：仅使用官方预设中验证过的行结构组合工具（行结构与配置字段逐行取自官方 minimal/standard 预设）。
+# 组合：persona（中文调研助手）+ Shell + 文件工具 + 网页检索 + 待办 + 提问 + 技能。
+
+- id: persona
+  name: '@deepseek-ai/dsh-persona'
+  config:
+    text: >-
+      你是一位信息调研助手，由 {{model}} 模型驱动。工作目录是 {{cwd}}。
+      调研原则：先明确问题与证据标准；多渠道交叉验证；区分事实与观点；输出结论附来源；无法验证的结论明确标注"未验证"。
+
+- id: tool-bash
+  name: '@deepseek-ai/dsh-tool-bash'
+  disabled: !!js process.platform === 'win32'
+
+- id: tool-fs
+  name: '@deepseek-ai/dsh-tool-fs'
+
+- id: tool-fs-search
+  name: '@deepseek-ai/dsh-tool-fs-search'
+  config:
+    sampleOverCapGlobResults: false
+
+- id: tool-web
+  name: '@deepseek-ai/dsh-tool-web'
+  config:
+    fetch: false
+    searchTimeoutMs: 60000
+
+- id: tool-todo
+  name: '@deepseek-ai/dsh-tool-todo'
+  config:
+    allowParallelInProgress: true
+
+- id: tool-ask-user
+  name: '@deepseek-ai/dsh-tool-ask-user'
+
+- id: skill-filesystem
+  name: '@deepseek-ai/dsh-skill-filesystem'
+
+- id: tool-skill
+  name: '@deepseek-ai/dsh-tool-skill'

@@ -1,0 +1,42 @@
+# 原创预设：仅使用官方预设中验证过的行结构组合工具（行结构与配置字段逐行取自官方 minimal/standard 预设）。
+# 组合：persona（中文写作助手）+ 文件工具 + 编辑器 + 技能 + 待办 + 提问 + 网页检索。
+
+- id: persona
+  name: '@deepseek-ai/dsh-persona'
+  config:
+    text: >-
+      你是一位中文技术写作与文档维护助手，由 {{model}} 模型驱动。工作目录是 {{cwd}}。
+      职责：撰写、校对、整理技术文档。原则：先读现有文档与术语再动笔；只写可验证的事实；术语中英规范（首次出现保留英文并给中文）；命令用代码块并标注环境；改动后同步版本号与 CHANGELOG。
+
+- id: tool-fs
+  name: '@deepseek-ai/dsh-tool-fs'
+
+- id: tool-fs-search
+  name: '@deepseek-ai/dsh-tool-fs-search'
+  config:
+    sampleOverCapGlobResults: false
+
+- id: str-replace-editor
+  name: '@deepseek-ai/dsh-tool-str-replace-editor'
+  config:
+    maxOutputChars: 16000
+
+- id: skill-filesystem
+  name: '@deepseek-ai/dsh-skill-filesystem'
+
+- id: tool-skill
+  name: '@deepseek-ai/dsh-tool-skill'
+
+- id: tool-todo
+  name: '@deepseek-ai/dsh-tool-todo'
+  config:
+    allowParallelInProgress: true
+
+- id: tool-ask-user
+  name: '@deepseek-ai/dsh-tool-ask-user'
+
+- id: tool-web
+  name: '@deepseek-ai/dsh-tool-web'
+  config:
+    fetch: false
+    searchTimeoutMs: 60000
