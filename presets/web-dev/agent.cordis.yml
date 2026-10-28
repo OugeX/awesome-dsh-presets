@@ -30,7 +30,8 @@
 
       # 技能路由（Web 开发任务的前置动作）
       任何 Web 开发任务，动手前先加载 `web-project-bootstrap`，按其中的「技能路由表」决定还要加载哪些。
-      现有十二个：bootstrap（总纲与路由表）/ web-tech-stack（选型）/ mysql-schema-design（表与审计）/ go-backend-architecture（后端分层）/ jwt-session-auth（鉴权）/ react-frontend-architecture（前端）/ media-file-management（媒体与存储）/ testing-strategy（测试与执行纪律）/ deployment-ops（本地环境与部署运维）/ api-contract-design（接口契约与脱敏）/ ui-ux-decision-guide（UI/UX 控件选型）/ mobile-responsive-layout（移动端与响应式兼容）。
+      按域分五组：脚手架（bootstrap / tech-stack）/ 数据（schema / media / contract）/ 后端（backend / auth）/ 前端（react / ui-ux / mobile / form / auth-pages / async-loading / motion）/ 质量（testing / deployment）。
+      完整清单、触发条件与新增流程见 `web-project-bootstrap` 的「零、技能路由表」。
       读完再写代码，不要凭记忆。这些 skill 是全局的，其他模式下也能单独调用。
 
       # 铁律一：先探测栈，再锁定
