@@ -26,7 +26,7 @@ cat ~/dsh-presets/rules/code-quality.md >> ~/.dsh/AGENTS.md
 | minimal-zh | Derived (official minimal, Chinese persona) | Two-tool minimal |
 | writer | Original | Chinese technical writing combo |
 | researcher | Original | Research combo |
-| web-dev | Original | Web-dev pretexts: 12 companion skills, stack choice to deploy |
+| web-dev | Original | Web-dev pretexts: 23 companion skills, stack choice to deploy |
 
 ## Rules
 
